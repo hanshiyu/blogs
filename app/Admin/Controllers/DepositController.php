@@ -31,6 +31,7 @@ class DepositController extends AdminController
         $grid->disableFilter();
         $grid->column('id','编号');
         $grid->column('account','入账账户');
+        $grid->column('bill_num','汇票账号');
         $grid->column('amount','入账金额');
         $grid->column('company_logo','公司logo')->image('/uploads',50, 50);
 
@@ -64,6 +65,7 @@ class DepositController extends AdminController
     {
         $form = new Form(new Deposit());
         $form->text('account', '入账账户')->required();
+        $form->text('bill_num', '汇票账号')->required();
         $form->text('amount', '入账金额')->required();
         $form->text('company_name', '公司名称')->required();
         $form->image('company_logo','公司logo')->uniqueName()->required();
