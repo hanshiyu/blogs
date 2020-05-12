@@ -16,7 +16,7 @@ class DepositController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Deposit';
+    protected $title = 'Api\Deposit';
 
     /**
      * Make a grid builder.
